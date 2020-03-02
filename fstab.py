@@ -136,7 +136,7 @@ class Fstab(object):
     
     def open_file(self, filespec, mode):
         if type(filespec) in (str, unicode):
-            return file(filespec, mode)
+            return open(filespec, mode)
         else:
             return filespec
 
