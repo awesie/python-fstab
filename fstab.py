@@ -18,6 +18,10 @@ import os
 import re
 import tempfile
 
+# unicode type does not exist in Python 3. Quick hack from stackoverflow.
+import sys
+if sys.version_info[0] >= 3:
+    unicode = str
 
 class Line(object):
 
